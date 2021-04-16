@@ -1,0 +1,4 @@
+{
+  "MyTest.py::mytest::test_can_start_a_list_and_retrieve_it_later": true,
+  "MyTest.py::test_can_start_a_list_and_retrieve_it_later": true
+}
