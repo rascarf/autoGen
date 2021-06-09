@@ -1,4 +1,4 @@
-db.sqlite3
+database/db.sqlite3
 Git-2.31.1-64-bit.exe
 __pycache__
 *.pyc
