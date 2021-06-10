@@ -3,19 +3,20 @@ from selenium.webdriver.common.keys import Keys
 import time
 import unittest
 from django.test import LiveServerTestCase
+from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from selenium.common.exceptions import WebDriverException
 import os
 MAX_WAIT = 3
 
-class mytest(LiveServerTestCase):
+class mytest(StaticLiveServerTestCase):
     browser = webdriver.Chrome()
     def setUp(self):
-        self.browser = webdriver.Chrome()
-        # staging_server = os.environ.get("STAGING_SERVER")
-        staging_server = '152.136.215.151'
-        if staging_server:
-            self.live_server_url = "http://" + staging_server
-        # pass
+        # self.browser = webdriver.Chrome()
+        # # staging_server = os.environ.get("STAGING_SERVER")
+        # staging_server = '152.136.215.151'
+        # if staging_server:
+        #     self.live_server_url = "http://" + staging_server
+        pass
 
     def wait_for_row_in_list_table(self,row_text):
         start_time = time.time()
