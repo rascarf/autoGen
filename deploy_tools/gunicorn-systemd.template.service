@@ -4,3 +4,9 @@ Description=Gunicorn server for SITENAME
 [Service]
 Restart=on-failure
 User=ubuntu
+WorkingDirectory=/home/ubuntu/site/SITENAME/source/source
+ExecStart=/home/ubuntu/site/SITENAME/virtualenv/bin/gunicorn --bind u
+nix:/tmp/SITENAME.socket hello.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
